@@ -34,7 +34,7 @@ export default function Sender({ history, setHistory }) {
     const fetchAssistantResponse = async () => {
       const assistant = await sendToGPT(
         history,
-        "https://localhost:7132/api/Conversation/GetConversation"
+        "https://gptwebapi.azurewebsites.net/api/Conversation/GetConversation"
       );
       console.log(assistant);
       setHistory(() => assistant);
@@ -49,7 +49,7 @@ export default function Sender({ history, setHistory }) {
   const handleOnClear = useCallback(async () => {
     console.log("clear");
     const response = await clearConversation(
-      "https://localhost:7132/api/ClearConversation/Clear/8cb2a139-cf05-41d4-883a-0b2aa217007c"
+      "https://gptwebapi.azurewebsites.net/api/ClearConversation/Clear/8cb2a139-cf05-41d4-883a-0b2aa217007c"
     );
     const data = response.json();
     setHistory(() => data);

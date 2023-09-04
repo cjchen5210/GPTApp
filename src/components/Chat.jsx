@@ -9,7 +9,7 @@ function Chat() {
   useEffect(() => {
     const fetchData = async () => {
       const conversationData = await getConversation(
-        "https://localhost:7132/api/GetChat/GetChat/8cb2a139-cf05-41d4-883a-0b2aa217007c"
+        "https://gptwebapi.azurewebsites.net/api/GetChat/GetChat/8cb2a139-cf05-41d4-883a-0b2aa217007c"
       );
       console.log("get conversation ", conversationData);
       setHistory((pre) => conversationData);
