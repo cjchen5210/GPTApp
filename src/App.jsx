@@ -3,7 +3,7 @@ import { useState } from "react";
 function App() {
   return (
     <>
-      <h1 className="text-center"> Test Ava GPT</h1>
+      <h1 className="text-center">GPT</h1>
     </>
   );
 }
